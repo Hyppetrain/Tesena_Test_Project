@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "Tesena_Test_Project": {
+      "commandName": "Project",
+      "environmentVariables": {
+        "PWDEBUG": "1"
+      }
+    }
+  }
+}
