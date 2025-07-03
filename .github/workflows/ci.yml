@@ -25,11 +25,11 @@ jobs:
     - name: Restore dotnet tools
       run: dotnet tool restore
 
-    - name: Install Playwright browsers
-      run: dotnet tool run playwright install
-
     - name: Build solution
       run: dotnet build --configuration Release --no-restore
+
+    - name: Install Playwright browsers
+      run: dotnet tool run playwright install
 
     - name: Run tests
       run: dotnet test --configuration Release --no-build --verbosity normal
