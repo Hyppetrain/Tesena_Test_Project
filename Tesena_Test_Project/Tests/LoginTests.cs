@@ -72,12 +72,12 @@ namespace Tesena_Test_Project.Tests
 
             #region naviagtion
             // Go to Homepage
-            await Page.RunAndWaitForNavigationAsync(() =>
-            Page.ClickAsync("//img[@class='logo img-fluid']"));
+            await Page.ClickAsync("//div[@class='col-md-2 hidden-sm-down']//img[1]");
             #endregion
 
             #region check for Homepage
             // Verify Homepage
+            await Page.WaitForURLAsync("http://37.27.17.198:8084/cs/");
             Assert.That(Page.Url, Does.EndWith("/cs/"));
             #endregion
 
